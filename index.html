@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspar Sinitsin's CV</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'wide': '1900px',
+            },
+          colors: {
+            greend: '#0a3f3b',
+            greenl: '#157a57',
+            brlack: '#0f0a05',
+            beige: '#fff0de',
+            orange: '#e45a36',
+          },
+            fontFamily: {
+            crimsonPro: ['Crimson Pro', 'serif'],
+            crimsonText: ['Crimson Text', 'serif'],
+            plexSans: ['IBM Plex Sans', 'sans-serif'],
+            playfair: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+     <script 
+   src="https://kit.fontawesome.com/f49a379e4a.js"
+   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg" class="fixed z-[-1] left-0 top-0"></canvas>
+    <div class="z-[1] bg-black/30 md:hidden">
+      </div>
+    <div class="flex justify-between relative z-[100] mx-auto py-[70px] text-beige">
+    <div class="pl-[70px]">
+        <h1 class="font-crimsonPro text-7xl mb-5">Kaspar Sinitsin</h1>
+        <p class="text-2xl leading-[1.6] font-crimsonText tracking-wide place-self-center mr-10">Fullstack Developer</p>
+   <div x-data="{ animate: false }">
+    <h2 class="text-3xl font-plexSans mt-16 mb-8 hover:text-orange cursor-pointer select-none transition transform duration-500" 
+         :class="{ 'scale-120': animate}"
+         @click="animate = !animate">About Me</h2>
+         
+    <div class="transition transform ease-in"
+         :class="{ 'translate-y-8': !animate, 'opacity-0': !animate, 'duration-1000': animate, 'duration-200': !animate }">
+        <p class="text-sm sm:text-lg wide:text-xl font-playfair text-beige pr-40 mb-4">
+            I'm a curious mind and a quick learner — a developer who strives to bring together the <i>professional</i> and the <i>human</i>, the <i>creative</i> and the <i>practical</i>. I enjoy shaping interfaces and experiences that feel intuitive and alive.
+        </p>
+        <p class="text-sm sm:text-lg wide:text-xl font-playfair text-beige pr-40">
+            My background in art, languages, event management, and customer service helps me see projects from multiple perspectives and connect with a wide range of clients and collaborators. My training in web-development and UX/UI engineering gives me the tools to craft thoughtful, user-centred solutions.
+        </p>
+    </div>
+</div></div>
+ <div class="wide:min-w-[800px] lg:min-w-[600px] md:min-w-[400px] sm:min-w-[100px]">
+    </div>
+     <div class="pt-[200px] min-w-[350px] text-beige">
+      
+       <div x-data="{ animate: false }">
+      <h2 class="text-3xl font-plexSans mb-8 hover:text-orange cursor-pointer select-none transition transform duration-500" 
+         :class="{ 'scale-120': animate}"
+         @click="animate = !animate">My CV</h2>  <div class="transition transform ease-in"
+         :class="{ 'translate-y-8': !animate, 'opacity-0': !animate, 'duration-1000': animate, 'duration-200': !animate }"><a href="./src/Kaspar_Sinitsin_CV-en.pdf" class="bg-orange text-brlack hover:bg-brlack hover:text-orange rounded-lg px-4 py-2">English</a>
+         <a href="./src/Kaspar_Sinitsin_CV-de.pdf" class="bg-orange text-brlack hover:bg-brlack hover:text-orange rounded-lg px-4 py-2">Deutsch</a>
+    </div>
+      </div>
+       <div x-data="{ animate: false }">
+    <h2 class="text-3xl font-plexSans mt-16 mb-8 hover:text-orange cursor-pointer select-none transition transform duration-500" 
+         :class="{ 'scale-120': animate}"
+         @click="animate = !animate">Contact me</h2>
+            <div class="transition transform ease-in"
+         :class="{ 'translate-y-8': !animate, 'opacity-0': !animate, 'duration-1000': animate, 'duration-200': !animate }">
+          <ul class="text-beige font-playfair text-sm sm:text-lg wide:text-xl space-y-4 -ml-20">
+            <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="email:kaspar.sinitsin@gmail.com"><i class="fa-regular fa-envelope mr-4"></i> kaspar.sinitsin@gmail.com</a></li>
+            <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="https://github.com/KasparSinitsin"><i class="fa-brands fa-github mr-4"></i> github.com/KasparSinitsin</a></li>
+            <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="https://www.linkedin.com/in/kasparsinitsin/"><i class="fa-brands fa-linkedin mr-4 ml-8"></i> linkedin.com/in/KasparSinitsin</a></li>
+          </ul>
+            </div>
+       </div>
+     </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
