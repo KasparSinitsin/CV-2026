@@ -9,6 +9,8 @@ const camera = new THREE.PerspectiveCamera(
     1000 
 );
 
+const isMobile = window.innerWidth < 768;
+
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     alpha: true 
@@ -21,11 +23,11 @@ renderer.setPixelRatio(window.devicePixelRatio);
 camera.position.z = 30;
 
 const particlesGeometry = new THREE.BufferGeometry();
-const particleCount = 3000; 
+const particleCount = isMobile ? 1500 : 3000; 
 
 const positions = new Float32Array(particleCount * 3);  
 
-const radius = 9; 
+const radius = isMobile ? 5 : 9; 
 
 for (let i = 0; i < particleCount; i++) {
     const theta = Math.random() * Math.PI * 2; 
@@ -78,7 +80,7 @@ floor.position.y = -20;
 
 scene.add(floor);
 
-const spotCount = 150;
+const spotCount = isMobile ? 50 : 150;
 
 const lightSpots = [];
 
@@ -137,3 +139,9 @@ window.addEventListener('resize', () => {
     
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+if (window.innerWidth < 768) {
+    particlesMaterial.opacity = 0.3; 
+    
+    highlightMaterial.opacity = 0.2;
+}
