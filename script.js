@@ -106,7 +106,7 @@ for (let i = 0; i < spotCount; i++) {
     lightSpots.push({
         mesh: spot,
         angle: Math.random() * Math.PI * 2,  
-        speed: 0.007 + Math.random() * 0.01, 
+        speed: 0.005 + Math.random() * 0.01, 
         distance: 5 + Math.random() * 20,  
         color: spotMaterial.color.clone()  
     });
