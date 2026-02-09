@@ -6,7 +6,7 @@
     <title>Kaspar Sinitsin - CV</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Righteous&display=swap" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
       <script>
@@ -24,7 +24,7 @@
             orange: '#e45a36',
           },
             fontFamily: {
-            crimsonPro: ['Crimson Pro', 'serif'],
+            right: ['Righteous', 'serif'],
             crimsonText: ['Crimson Text', 'serif'],
             plexSans: ['IBM Plex Sans', 'sans-serif'],
             playfair: ['Playfair Display', 'serif'],
@@ -44,8 +44,8 @@
       </div>
     <div class="flex justify-between relative z-[100] mx-auto py-[70px] text-beige">
     <div class="pl-[70px]">
-        <h1 class="font-crimsonPro text-7xl mb-5">Kaspar Sinitsin</h1>
-        <p class="text-2xl leading-[1.6] font-crimsonText tracking-wide place-self-center mr-10">Fullstack Developer</p>
+        <h1 class="font-right text-7xl mb-5">Kaspar Sinitsin</h1>
+        <p class="text-2xl leading-[1.6] font-plexSans tracking-wide place-self-center -mr-16">Fullstack Developer</p>
    <div x-data="{ animate: false }">
     <h2 class="text-3xl font-plexSans mt-16 mb-8 hover:text-orange cursor-pointer select-none transition transform duration-500" 
          :class="{ 'scale-120': animate}"
@@ -53,10 +53,10 @@
          
     <div class="transition transform ease-in"
          :class="{ 'translate-y-8': !animate, 'opacity-0': !animate, 'duration-1000': animate, 'duration-200': !animate }">
-        <p class="text-sm sm:text-lg wide:text-xl font-playfair text-beige pr-40 mb-4">
+        <p class="text-sm sm:text-lg wide:text-xl font-crimsonText text-beige pr-40 mb-4">
             I'm a curious mind and a quick learner — a developer who strives to bring together the <i>professional</i> and the <i>human</i>, the <i>creative</i> and the <i>practical</i>. I enjoy shaping interfaces and experiences that feel intuitive and alive.
         </p>
-        <p class="text-sm sm:text-lg wide:text-xl font-playfair text-beige pr-40">
+        <p class="text-sm sm:text-lg wide:text-xl font-crimsonText text-beige pr-40">
             My background in art, languages, event management, and customer service helps me see projects from multiple perspectives and connect with a wide range of clients and collaborators. My training in web-development and UX/UI engineering gives me the tools to craft thoughtful, user-centred solutions.
         </p>
     </div>
@@ -79,7 +79,7 @@
          @click="animate = !animate">Contact me</h2>
             <div class="transition transform ease-in"
          :class="{ 'translate-y-8': !animate, 'opacity-0': !animate, 'duration-1000': animate, 'duration-200': !animate }">
-          <ul class="text-beige font-playfair text-sm sm:text-lg wide:text-xl space-y-4 -ml-20">
+          <ul class="text-beige font-crimsonText text-sm sm:text-lg wide:text-xl space-y-4 -ml-20">
             <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="email:kaspar.sinitsin@gmail.com"><i class="fa-regular fa-envelope mr-4"></i> kaspar.sinitsin@gmail.com</a></li>
             <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="https://github.com/KasparSinitsin"><i class="fa-brands fa-github mr-4"></i> github.com/KasparSinitsin</a></li>
             <li class="flex justify-center items-center pb-4 hover:text-brlack"><a href="https://www.linkedin.com/in/kasparsinitsin/"><i class="fa-brands fa-linkedin mr-4 ml-8"></i> linkedin.com/in/KasparSinitsin</a></li>
