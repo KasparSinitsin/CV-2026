@@ -27,7 +27,7 @@ const particleCount = isMobile ? 1500 : 3000;
 
 const positions = new Float32Array(particleCount * 3);  
 
-const radius = isMobile ? 5 : 9; 
+const radius = isMobile ? 7 : 9; 
 
 for (let i = 0; i < particleCount; i++) {
     const theta = Math.random() * Math.PI * 2; 
